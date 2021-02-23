@@ -6,15 +6,21 @@ namespace R_N_G
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-
-
-            for (int i = 0; i < 10; i++)
+            // initialization of inputs
+            long multiplier = 1664525;
+            long increment = 1013904223;
+            long modulus = (long) Math.Pow(2,32);
+            long initialseed = 1;
+            // creation of object
+            var lcg = new LCG(multiplier, increment, modulus, initialseed);
+            for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine(random.Next(11, 20));
+                Console.WriteLine(lcg.Next(initialseed, modulus));
             }
-
             Console.ReadLine();
+           
+
+
         }
     }
 }
