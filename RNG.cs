@@ -17,7 +17,7 @@ namespace R_N_G
             M = m;
             Seed = seed;
         }
-        public abstract long Next(long minValue, long maxValue);
+        public abstract long Next();
             
     }
 }

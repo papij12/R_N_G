@@ -10,11 +10,11 @@ namespace R_N_G
         {
 
         }
-        public override long Next(long minValue, long maxValue)
+        public override long Next()
         {
-
-            Seed = ((A * Seed) + C) % (M - Seed);
-
+            Seed = ((A * Seed) + C) % M;
+            //maxValue = M;
+            //minValue = Seed;
             return Seed;
         }
     }

@@ -7,15 +7,15 @@ namespace R_N_G
         static void Main(string[] args)
         {
             // initialization of inputs
-            long multiplier = 1664525;
-            long increment = 1013904223;
-            long modulus = (long) Math.Pow(2,32);
-            long initialseed = 1;
+            long multiplier = 7;
+            long increment = 0;
+            long modulus = 32;
+            long seed = 1;
             // creation of object
-            var lcg = new LCG(multiplier, increment, modulus, initialseed);
-            for (int i = 0; i < 20; i++)
+            var lcg = new LCG(multiplier, increment, modulus, seed);
+            for (int i = 0; i < 6; i++)
             {
-                Console.WriteLine(lcg.Next(initialseed, modulus));
+                Console.WriteLine(lcg.Next());
             }
             Console.ReadLine();
            
