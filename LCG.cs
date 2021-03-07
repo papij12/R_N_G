@@ -13,14 +13,9 @@ namespace R_N_G
         public override long Next(long minvalue, long maxvalue)
         {
             //long [] nextrandomnumber = new long [9];
-            Seed = ((A * Seed) + C) % M;
-           long answer = minvalue + Seed % (maxvalue - minvalue);
-            //for (int i = 0; i < nextrandomnumber.Length; i++)
-            //{
-            //    nextrandomnumber[i] = Seed;
-                
-            //}
-            return answer;
+            NextRandomNumber = ((A * NextRandomNumber) + C) % M;
+          long answer = minvalue + NextRandomNumber % (maxvalue - minvalue);
+           return answer;
         }
     }
 }

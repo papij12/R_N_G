@@ -8,14 +8,14 @@ namespace R_N_G
         {
             // initialization of inputs
             long multiplier = 7;
-            long increment = 7;
-            long modulus = 10;
+            long increment = 0;
+            long modulus = 32;
             long seed = 1;
             // creation of object
             var lcg = new LCG(multiplier, increment, modulus, seed);
             for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine(lcg.Next(seed,modulus));
+                Console.WriteLine(lcg.Next(0, 32));
             }
             Console.ReadLine();
            
