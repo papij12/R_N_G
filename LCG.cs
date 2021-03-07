@@ -10,12 +10,17 @@ namespace R_N_G
         {
 
         }
-        public override long Next()
+        public override long Next(long minvalue, long maxvalue)
         {
+            //long [] nextrandomnumber = new long [9];
             Seed = ((A * Seed) + C) % M;
-            //maxValue = M;
-            //minValue = Seed;
-            return Seed;
+           long answer = minvalue + Seed % (maxvalue - minvalue);
+            //for (int i = 0; i < nextrandomnumber.Length; i++)
+            //{
+            //    nextrandomnumber[i] = Seed;
+                
+            //}
+            return answer;
         }
     }
 }
