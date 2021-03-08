@@ -11,11 +11,14 @@ namespace R_N_G
             long increment = 0;
             long modulus = 32;
             long seed = 1;
+            long[] randomnum = new long[20];
             // creation of object
             var lcg = new LCG(multiplier, increment, modulus, seed);
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < randomnum.Length; i++)
             {
-                Console.WriteLine(lcg.Next(0, 32));
+                randomnum[i] = lcg.Next(0, 32);
+                Console.WriteLine($"numebrs {i+1}: " + randomnum[i]);
+
             }
             Console.ReadLine();
            
